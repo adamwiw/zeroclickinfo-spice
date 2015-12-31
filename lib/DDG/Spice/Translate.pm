@@ -21,7 +21,7 @@ handle remainder => sub {
 
     my @r = $_ =~ /(\w+\s\S+\d\D+)\s\D(\w+)/ig;
     my $size = @r;
-    return if grep {$_ eq @r[$size]} @lang;
+    return if grep {$_ eq $r[$size]} @lang;
 };
 
 1;

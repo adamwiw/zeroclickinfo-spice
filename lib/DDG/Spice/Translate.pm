@@ -20,6 +20,9 @@ triggers any => qw (in);
 # Handle statement
 handle remainder => sub {
     my @languages = qw(af afrikaans ar arabic az azerbaijani ba bashkir be belarusian bg bulgarian bs bosnian ca catalan cs czech cy welsh da danish de german el greek en english es spanish et estonian eu basque fa persian fi finnish fr french ga irish gl galician he hebrew hr croatian ht haitian hu hungarian hy armenian id indonesian is icelandic it italian ja japanese ka georgian kk kazakh ko korean ky kirghiz la latin lt lithuanian lv latvian mg malagasy mk macedonian mn mongolian ms malay mt maltese nl dutch no norwegian pl polish pt portuguese ro romanian ru russian sk slovak sl slovenian sq albanian sr serbian sv swedish sw swahili tg tajik th thai tl tagalog tr turkish tt tatar uk ukrainian uz uzbek vi vietnamese zh chinese);
+
+    my @r = $_ =~ /([\S\s]+)\s([\w]+)/g;
+    my $lang = $r[1];
     return $_ if grep {$_ eq $lang} @languages;
 };
 

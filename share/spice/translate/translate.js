@@ -15,9 +15,9 @@
             name: 'Dictionary',
             data: {
 	        text: api_result.text,
-		from: api_result.lang.substr(0, 1).toUpperCase(),
+		from: api_result.lang.substr(0, 2).toUpperCase(),
 		to:   api_result.lang.substr(3, 4).toUpperCase(),
-		query:decodeURIComponent(DDG.get_query()).replace(/[\S\s]+(\sin[\s\S]+)/, '')
+		query:decodeURIComponent(DDG.get_query()).replace(/\sin\s[\w]+$/, '')
 	    },
             meta: {
                 sourceName: 'Yandex.Translate',

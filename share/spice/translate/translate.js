@@ -13,24 +13,19 @@
             // Customize these properties
 	    id:   'translate',
             name: 'Translate',
-            data: api_result.text,
+            data: {
+	        text: api_result.text
+	    },
             meta: {
                 sourceName: 'Yandex.Translate',
                 sourceUrl: 'http://translate.yandex.com/',
 		sourceIconUrl: 'https://translate.yandex.net/main/v2.64.1451491320/i/favicon.ico'
             },
-	    onShow: function() {
-		Spice.getDOM(ID).find('.translate__translation').html(api_result.text);
-            },
             templates: {
-                group: 'info',
+                group: 'base',
                 options: {
-		    content: Spice.translate.content,
-                    moreText: 
-		    {
-			href: 'https://translate.yandex.com/',
-			text: 'Translate.Yandex'
-		    }
+                    content: Spice.translate.content,
+                    moreAt: true
                 }
             }
         });

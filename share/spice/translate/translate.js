@@ -24,7 +24,7 @@
 		sourceIconUrl: 'https://translate.yandex.net/main/v2.64.1451491320/i/favicon.ico'
             },
             templates: {
-                group: 'detail',
+                group: 'info',
                 options: {
                     content: Spice.translate.translate,
 		    moreText: {

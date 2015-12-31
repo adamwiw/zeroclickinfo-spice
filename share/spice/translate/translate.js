@@ -15,6 +15,8 @@
             name: 'Translate',
             data: api_result.text,
             meta: {
+	        searchTerm: 'search - term',
+                itemType: 'Translation',
                 sourceName: 'Yandex.Translate',
                 sourceUrl: 'http://translate.yandex.com/'
             },

@@ -17,7 +17,7 @@
 	        text: api_result.text,
 		from: api_result.lang.substr(0, 1).toUpperCase(),
 		to:   api_result.lang.substr(3, 4).toUpperCase(),
-		query:decodeURIComponent(query).replace(/[\S\s]+(\sin[\s\S]+)/, '')
+		query:decodeURIComponent(DDG.get_query()).replace(/[\S\s]+(\sin[\s\S]+)/, '')
 	    },
             meta: {
                 sourceName: 'Yandex.Translate',

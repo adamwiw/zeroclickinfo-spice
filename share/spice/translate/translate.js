@@ -7,7 +7,7 @@
         if (!api_result || api_result.error || api_result.text.length === 0) {
             return Spice.failed('translate');
         }
-        console.log(api_result);
+        alert(api_result.code);
         // Render the response
         Spice.add({
             // Customize these properties

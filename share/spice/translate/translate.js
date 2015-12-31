@@ -24,8 +24,7 @@
             templates: {
                 group: 'base',
                 options: {
-                    content: Spice.translate.content,
-                    moreAt: true
+                    content: Spice.translate.translate
                 }
             }
         });

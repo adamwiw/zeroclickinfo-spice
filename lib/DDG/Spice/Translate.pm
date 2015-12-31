@@ -19,9 +19,8 @@ triggers any => qw (in);
 handle remainder => sub {
     my @languages = qw(af Afrikaans ar Arabic az Azerbaijani ba Bashkir be Belarusian bg Bulgarian bs Bosnian ca Catalan cs Czech cy Welsh da Danish de German el Greek en English es Spanish et Estonian eu Basque fa Persian fi Finnish fr French ga Irish gl Galician he Hebrew hr Croatian ht Haitian hu Hungarian hy Armenian id Indonesian is Icelandic it Italian ja Japanese ka Georgian kk Kazakh ko Korean ky Kirghiz la Latin lt Lithuanian lv Latvian mg Malagasy mk Macedonian mn Mongolian ms Malay mt Maltese nl Dutch no Norwegian pl Polish pt Portuguese ro Romanian ru Russian sk Slovak sl Slovenian sq Albanian sr Serbian sv Swedish sw Swahili tg Tajik th Thai tl Tagalog tr Turkish tt Tatar uk Ukrainian uz Uzbek vi Vietnamese zh Chinese);
 
-    my @r = $_ =~ /(\w+\s\S+\d\D+)\s\D(\w+)/ig;
-    my $lang = @r[1];
-    return if grep {$_ eq $lang} @languages;
+    my @r = $_ =~ /(\w+\s\S+\d\D+)\s\D(\w+)/g;
+    return if grep {$_ eq $r[1]} @languages;
 };
 
 1;

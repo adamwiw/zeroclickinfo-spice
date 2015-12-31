@@ -10,32 +10,19 @@
         // Render the response
         Spice.add({
             // Customize these properties
+	    id:	  'translate',
             name: 'Translate',
             data: api_result.text,
             meta: {
                 sourceName: 'Yandex.Translate',
-                sourceUrl: 'http://translate.yandex.com/',
-		total: api_result.text,
-		itemType: getlang.replace('-', ' to '),
-		searchTerm: decodeURIComponent(query)
-            },
-            normalize: function(item) {
-                return {
-                    // customize as needed for your chosen template
-                    title: api_result.title,
-                    subtitle: api_result.subtitle,
-                    image: api_result.icon
-		    url: 'https://translate.yandex.com/?text=' + api_result.text + '&lang=' + getlang,
-		    arrowUrl: DDG.get_asset_path('hacker_news','arrow_up.png')
-                };
+                sourceUrl: 'http://translate.yandex.com/'
             },
             templates: {
-                group: 'info',
+                group: 'detail',
                 options: {
-                    content: Spice.translate.content,
                     moreText: 
 		    {
-			href: 'https://translate.yandex.com/?text=' + api_result.text + '&lang=' + getlang',
+			href: 'https://translate.yandex.com/',
 			text: 'Translate.Yandex'
 		    }
                 }

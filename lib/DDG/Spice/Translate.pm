@@ -23,7 +23,7 @@ handle remainder => sub {
     my @r = $_ =~ /([\S\s]+)\s([\w]+)/g;
     my $text = $r[0];
     my $lang = $r[1];
-    return $text, $lang if grep {$_ eq $lang} @languages;
+    return $text, $lang unless grep {$_ eq $lang} @languages;
 };
 
 1;

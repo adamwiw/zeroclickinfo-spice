@@ -19,7 +19,7 @@
                 sourceUrl: 'http://translate.yandex.com/'
             },
             templates: {
-                group: 'detail',
+                detail: true,
                 options: {
                     moreText: 
 		    {

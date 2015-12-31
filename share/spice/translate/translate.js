@@ -11,6 +11,7 @@
         // Render the response
         Spice.add({
             // Customize these properties
+	    id:   'translate',
             name: 'Translate',
             data: api_result.text,
             meta: {

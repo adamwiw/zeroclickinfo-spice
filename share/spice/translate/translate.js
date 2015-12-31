@@ -12,9 +12,11 @@
         Spice.add({
             // Customize these properties
 	    id:   'translate',
-            name: 'Translate',
+            name: 'Dictionary',
             data: {
-	        text: api_result.text
+	        text: api_result.text,
+		from: api_result.lang.substr(0, 1).toUpperCase(),
+		to:   api_result.lang.substr(3, 4).toUpperCase()
 	    },
             meta: {
                 sourceName: 'Yandex.Translate',
@@ -24,7 +26,11 @@
             templates: {
                 group: 'base',
                 options: {
-                    content: Spice.translate.translate
+                    content: Spice.translate.translate,
+		    moreText: {
+			text: 'Yandex.Translate',
+			href: 'http://translate.yandex.com/'
+		    }
                 }
             }
         });

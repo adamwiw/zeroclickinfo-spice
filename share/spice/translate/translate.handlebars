@@ -1,11 +1,32 @@
-<div class="translate__translation">
-    <p>
-	{{query}}
-    </p>
-    <p>
-	Translation from {{from}} to {{to}}:
-    </p>
-    <p class="zci--translate translate__original">
-	{{text}}
-    </p>
+<div class="translate__container">
+    <div class="translate__left">
+	<div class="translate__panel">
+	    <div class="translate__clear">Clear</div>
+	    <div class="translate__read">Read</div>
+	    <div class="translate__microphone">Say</div>
+	    <div class="translate__keyboard">Keyboard</div>
+	    <div class="translate__source">
+		<span class="button">{{from}}</span>
+		<div class="translate__listbox"></div>
+	    </div>
+	</div>
+	<div class="translate__textbox">
+	    <textarea class="translate__text">{{query}}</textarea>
+	</div>
+    </div>
+    <div class="translate__right">
+    	<div class="translate__panel">
+	    <div class="translate__target">
+		<span class="button">{{to}}</span>
+		<div class="translate__listbox"></div>
+	    </div>
+	    <div class="translate__read">Read</div>
+	    <div class="translate__select">Select text</div>
+	    <div class="translate__search">Duck It</div>
+	    <div class="translate__share">Share</div>
+	</div>
+	<div class="translate__textbox">
+	    <textarea>{{text}}</textarea>
+	</div>
+    </div>
 </div>

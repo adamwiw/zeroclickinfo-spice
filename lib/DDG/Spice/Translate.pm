@@ -13,7 +13,20 @@ spice wrap_jsonp_callback => 0; # only enable for non-JSONP APIs (i.e. no &callb
 spice from => '([^/]+)/([^/]+)';
 spice to => 'https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20151229T022356Z.84821db488adeeb1.146aec47c8b050d170184c0bb68aee7baf85b1ae&text=$1&lang=$2&callback={{callback}}';
 
+spice alt_to => {
+    languages => {
+        to => 'https://translate.yandex.net/api/v1.5/tr.json/getLangs?key=trnsl.1.1.20151229T022356Z.84821db488adeeb1.146aec47c8b050d170184c0bb68aee7baf85b1ae&ui=$1&callback={{callback}}'
+    },
+    detect => {
+        to => 'https://translate.yandex.net/api/v1.5/tr.json/detect?key=trnsl.1.1.20151229T022356Z.84821db488adeeb1.146aec47c8b050d170184c0bb68aee7baf85b1ae&text=$1&callback={{callback}}'
+    },
+    translate => {
+        to => 'https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20151229T022356Z.84821db488adeeb1.146aec47c8b050d170184c0bb68aee7baf85b1ae&text=$1&lang=$2&callback={{callback}}'
+    }
+};
+
 # Triggers - https://duck.co/duckduckhack/spice_triggers
+# TODO: Extend to different queries like translate something language
 triggers any => qw (in);
 
 # Handle statement

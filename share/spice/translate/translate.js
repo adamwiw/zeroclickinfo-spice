@@ -34,7 +34,7 @@
 				if(listbox.parentNode.id == ".translate__source" && abbr == source || 
 				    listbox.parentNode.id == ".translate__target" && abbr == target)
 				    selected = ' selected';
-				dropdown += '<option value = "' + abbr'"' + selected + '>' + api_result.langs[abbr] + '</option>';
+				dropdown += '<option value = "' + abbr + '"' + selected + '>' + api_result.langs[abbr] + '</option>';
 			    }
 			    dropdown += '</select>';
 			    listbox.html(dropdown);

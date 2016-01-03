@@ -39,10 +39,9 @@
 			    dropdown += '</select>';
 			    listbox.html(dropdown);
 			    listbox.onchange = translate;
-			    };
 			}
 		    }
-                });
+		});
             },
             templates: {
                 group: 'info',

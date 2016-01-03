@@ -109,7 +109,7 @@
     
     function fetchTranslation(text, target) {
 	if(text.length > 0 ) {
-	    return $.getJSON('/js/spice/translate/translate/' + text + '/' + target);
+	    return $.getJSON('/js/spice/translate/translation/' + text + '/' + target);
 	} else {
             return new jQuery.Deferred().resolve(null).promise();
         }

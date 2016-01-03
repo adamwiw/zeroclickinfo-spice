@@ -20,7 +20,7 @@ spice alt_to => {
     detect => {
         to => 'https://translate.yandex.net/api/v1.5/tr.json/detect?key=trnsl.1.1.20151229T022356Z.84821db488adeeb1.146aec47c8b050d170184c0bb68aee7baf85b1ae&text=$1&callback={{callback}}'
     },
-    translate => {
+    translation => {
         to => 'https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20151229T022356Z.84821db488adeeb1.146aec47c8b050d170184c0bb68aee7baf85b1ae&text=$1&lang=$2&callback={{callback}}'
     }
 };
